@@ -46,7 +46,7 @@ fn vs_main(
     pos = rotate2d(uniforms.rotation) * pos;
 
     var output: VertexOutput;
-    output.position = vec4<f32>(pos.x, pos.y, 0.0, 1.0);
+    output.position = vec4<f32>(pos.x * 0.5, pos.y * 0.5, 0.0, 1.0);
     output.color = vec4<f32>(uniforms.color, 1.0);
     return output;
 }
